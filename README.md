@@ -3,8 +3,8 @@
 # material-intro
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-material--intro-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3206)
-[![JitPack](https://jitpack.io/v/com.heinrichreimersoftware/material-intro.svg)](https://jitpack.io/#com.heinrichreimersoftware/material-intro)
-[![Downloads](https://jitpack.io/v/com.heinrichreimersoftware/material-intro/month.svg)](https://jitpack.io/#com.heinrichreimersoftware/material-intro)
+[![JitPack](https://jitpack.io/v/firefinchdev/material-intro.svg)](https://jitpack.io/#firefinchdev/material-intro)
+[![Downloads](https://jitpack.io/v/firefinchdev/material-intro.svg)](https://jitpack.io/#firefinchdev/material-intro)
 [![Build Status](https://travis-ci.org/heinrichreimer/material-intro.svg?branch=master)](https://travis-ci.org/heinrichreimer/material-intro)
 [![License](https://img.shields.io/github/license/heinrichreimer/material-intro.svg)](https://github.com/heinrichreimer/material-intro/blob/master/LICENSE.txt)
 
@@ -70,7 +70,7 @@ A demo app is available on Google Play:
 
 ### Gradle Dependency:
 
-*material-intro* is available on [**jitpack.io**](https://jitpack.io/#com.heinrichreimersoftware/material-intro).
+*material-intro* is available on [**jitpack.io**](https://jitpack.io/#firefinchdev/material-intro).
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
 ```gradle
@@ -83,11 +83,11 @@ allprojects {
 
 Add this in your module `build.gradle` file: 
 
-![](https://jitpack.io/v/com.heinrichreimersoftware/material-intro.svg)
+![](https://jitpack.io/v/firefinchdev/material-intro.svg)
 
 ```gradle
 dependencies {
-    implementation 'com.heinrichreimersoftware:material-intro:x.y.z'
+    implementation 'com.github.firefinchdev:material-intro:x.y.z'
 }
 ```
 
