@@ -365,19 +365,15 @@ public class IntroActivity extends AppCompatActivity implements IntroNavigation 
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                synchronized (this) {
-                    if (miPager.isFakeDragging())
-                        miPager.endFakeDrag();
-                    miPager.setCurrentItem(position);
-                }
+                if (miPager.isFakeDragging())
+                    miPager.endFakeDrag();
+                miPager.setCurrentItem(position);
             }
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                synchronized (this) {
-                    if (miPager.isFakeDragging())
-                        miPager.endFakeDrag();
-                }
+                if (miPager.isFakeDragging())
+                    miPager.endFakeDrag();
             }
         });
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -400,12 +396,10 @@ public class IntroActivity extends AppCompatActivity implements IntroNavigation 
                     miPager.setCurrentItem((int) Math.ceil(position), false);
                 }
 
-                synchronized (this) {
-                    if (!miPager.isFakeDragging() && !miPager.beginFakeDrag())
-                        return false;
+                if (!miPager.isFakeDragging() && !miPager.beginFakeDrag())
+                    return false;
 
-                    miPager.fakeDragBy(scrollX - pagerWidth * position);
-                }
+                miPager.fakeDragBy(scrollX - pagerWidth * position);
                 return true;
             }
         });
