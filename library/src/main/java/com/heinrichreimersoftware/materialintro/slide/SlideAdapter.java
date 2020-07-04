@@ -121,12 +121,13 @@ public class SlideAdapter extends FragmentPagerAdapter {
     }
 
     @Override
+    @NonNull
     public Fragment getItem(int position) {
         return data.get(position).getFragment();
     }
 
     @Override
-    public int getItemPosition(Object object) {
+    public int getItemPosition(@NonNull Object object) {
         if (object instanceof Fragment) {
             fragmentManager.beginTransaction()
                     .detach((Fragment) object)
@@ -137,7 +138,8 @@ public class SlideAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    @NonNull
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         Fragment fragment = getItem(position);
         if (fragment.isAdded()) {
             return fragment;
@@ -157,7 +159,7 @@ public class SlideAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         Fragment fragment = (Fragment) object;
         if (fragment == null)
             return;
