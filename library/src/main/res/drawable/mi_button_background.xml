@@ -22,7 +22,11 @@
   ~ SOFTWARE.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <solid android:color="#ffffff" />
-</shape>
+<ripple android:color="@color/mi_ripple_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+</ripple>

@@ -43,17 +43,14 @@ public class CanteenIntroActivity extends IntroActivity {
         setButtonNextVisible(false);
         setButtonCtaVisible(true);
         setButtonCtaTintMode(BUTTON_CTA_TINT_MODE_BACKGROUND);
-        TypefaceSpan labelSpan = new TypefaceSpan(
-                Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP ? "sans-serif-medium" : "sans serif");
+        TypefaceSpan labelSpan = new TypefaceSpan("sans-serif-medium");
         SpannableString label = SpannableString
                 .valueOf(getString(R.string.label_button_cta_canteen_intro));
         label.setSpan(labelSpan, 0, label.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         setButtonCtaLabel(label);
 
         setPageScrollDuration(500);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            setPageScrollInterpolator(android.R.interpolator.fast_out_slow_in);
-        }
+        setPageScrollInterpolator(android.R.interpolator.fast_out_slow_in);
 
         addSlide(new SimpleSlide.Builder()
                 .title(R.string.title_canteen_intro1)
