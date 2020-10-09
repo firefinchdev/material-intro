@@ -44,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        
+        Locale locale = getLocale();
+        Resources resources =context.getResources();
+        Configuration config = resources.getConfiguration();
+        config.locale = locale;
+        if (Build.VERSION.SDK_INT >= 17) {
+        config.setLayoutDirection(locale);
+        }
+        resources.updateConfiguration(config, resources.getDisplayMetrics());
 
         setSupportActionBar(binding.toolbar);
 
